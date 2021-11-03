@@ -21,7 +21,7 @@ def redhat_familly_supported_os
 end
 
 describe 'puppet_agent' do
-  package_version = '6.5.4'
+  package_version = '7.12.0'
   global_params = { package_version: package_version }
 
   def global_facts(facts, os)
