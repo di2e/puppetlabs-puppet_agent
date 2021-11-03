@@ -133,7 +133,7 @@ describe 'puppet_agent' do
           before(:each) { Puppet.settings[:digest_algorithm] = 'sha256' }
 
           context 'when an upgrade is required' do
-            let(:params) { { :package_version => '6.18.0' } }
+            let(:params) { { :package_version => '7.12.0' } }
 
             context 'with mismatching digest algorithms' do
               let(:facts) do
