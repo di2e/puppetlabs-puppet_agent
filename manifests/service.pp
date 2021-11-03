@@ -26,8 +26,5 @@ class puppet_agent::service{
       source => 'puppet:///modules/puppet_agent/solaris_start_puppet.sh',
       mode   => '0755',
     }
-    }
-  } else { }
-    }
   }
 }
