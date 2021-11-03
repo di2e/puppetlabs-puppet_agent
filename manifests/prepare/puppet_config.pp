@@ -5,14 +5,14 @@
 class puppet_agent::prepare::puppet_config (
   $package_version,
 ) {
-  assert_private()
-  $puppetconf = $::puppet_agent::params::config
-
-  if !defined(File[$puppetconf]) {
-    file { $puppetconf:
-      ensure => file,
-    }
-  }
+#  assert_private()
+#  $puppetconf = $::puppet_agent::params::config
+#
+#  if !defined(File[$puppetconf]) {
+#    file { $puppetconf:
+#      ensure => file,
+#    }
+#  }
 
   # (minimum agent package version) => (list of deprecated settings)
   $_deprecations = {
