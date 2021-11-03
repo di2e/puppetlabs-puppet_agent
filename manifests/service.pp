@@ -26,12 +26,6 @@ class puppet_agent::service{
       source => 'puppet:///modules/puppet_agent/solaris_start_puppet.sh',
       mode   => '0755',
     }
-    -> exec { 'solaris_start_puppet.sh':
-      command => "${::env_temp_variable}/solaris_start_puppet.sh ${::puppet_agent_pid} ${_service_names_arg} 2>&1 > ${_logfile} &",
-      path    => '/usr/bin:/bin:/usr/sbin',
-    }
-    file { ['/var/opt/lib', '/var/opt/lib/pe-puppet', '/var/opt/lib/pe-puppet/state']:
-      ensure => directory,
     }
   } else {
     $_service_names.each |$service| {
