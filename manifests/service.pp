@@ -27,14 +27,7 @@ class puppet_agent::service{
       mode   => '0755',
     }
     }
-  } else {
-    $_service_names.each |$service| {
-      service { $service:
-        ensure     => running,
-        enable     => true,
-        hasstatus  => true,
-        hasrestart => true,
-      }
+  } else { }
     }
   }
 }
