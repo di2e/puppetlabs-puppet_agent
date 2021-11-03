@@ -236,7 +236,7 @@ class puppet_agent (
     # ::puppet_agent::service class. Make sure it's applied after the install process finishes if needed:
     if $::osfamily != 'windows' and (!$is_pe or versioncmp($::clientversion, '4.0.0') < 0) {
       Class['puppet_agent::configure']
-      ~> contain('puppet_agent::service')
+    #  ~> contain('puppet_agent::service')
     }
   }
 }
